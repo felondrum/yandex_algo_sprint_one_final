@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/** @github <a href="https://github.com/felondrum/yandex_algo_sprint_one_final">...</a> */
 public class Main {
   public static void main(String[] args) {
     makeTests(); //comment row to skip tests
@@ -94,27 +95,27 @@ public class Main {
     return end - ((end-start)/2 + (end-start)%2);
   }
 
-    public static List<Integer> readArray(BufferedReader reader) throws IOException {
-    return Arrays.asList(reader.readLine().strip().split(" "))
-            .stream()
-            .map(Integer::parseInt)
-            .collect(Collectors.toList());
+  public static List<Integer> readArray(BufferedReader reader) throws IOException {
+  return Arrays.asList(reader.readLine().strip().split(" "))
+          .stream()
+          .map(Integer::parseInt)
+          .collect(Collectors.toList());
   }
 
-    public static void writeArray(List<? extends Number> arr) throws IOException {
-      BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
-      if (arr.size() == 0) {
-        writer.write("None");
-      } else {
-        for (Number i : arr) {
-          writer.write(String.valueOf(i));
-          writer.write(" ");
-        }
+  public static void writeArray(List<? extends Number> arr) throws IOException {
+    BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
+    if (arr.size() == 0) {
+      writer.write("None");
+    } else {
+      for (Number i : arr) {
+        writer.write(String.valueOf(i));
+        writer.write(" ");
       }
-      writer.flush();
     }
+    writer.flush();
+  }
 
-    public static void makeTests() {
+  public static void makeTests() {
     List<List<Integer>> testList = new ArrayList<>();
     List<List<Integer>> resultList = new ArrayList<>();
     testList.add(Arrays.asList(0,0,0,0,0)); resultList.add(Arrays.asList(0,0,0,0,0)); //1
